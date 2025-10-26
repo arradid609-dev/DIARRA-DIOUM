@@ -103,7 +103,9 @@
     }
     /* hide the sidebar if it becomes too narrow */
     #div2{
-        display: none;
+     display: block; /* affichée */
+        width: 100%; /* prend toute la largeur si nécessaire */
+        margin-top: 1rem; 
     }
     #div3{
         width: 100%;
@@ -168,3 +170,4 @@
     
 
     
+
