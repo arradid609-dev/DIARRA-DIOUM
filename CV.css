@@ -1,0 +1,167 @@
+#div1{
+    border: solid 1px transparent;
+    /* use fluid width and limit maximum to avoid oversized layout */
+    width: 95%;
+    max-width: 1200px;
+    height: auto;
+    min-height: 80vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4vh;
+    display: flex;
+}
+#div2{
+    border: solid 1px #c2b5a9;
+    /* sidebar: use percentage/flex basis so it scales */
+    flex: 0 0 35%;
+    max-width: 360px;
+    height: auto;
+    background-color: #c2b5a9;
+}
+#div2 h4{
+    color:#fff9f3;
+}
+#div3{
+    background-color: #fff9f3;
+    /* main content: take remaining space */
+    flex: 1 1 60%;
+    max-width: 800px;
+    height: auto;
+    border: solid #fff9f3 1px;
+}
+
+#nom{
+    margin-left: 50vh;
+    margin-top: 10vh;
+    color: #60371c;
+}
+#img4{
+    margin-left: 8.5vh;
+    margin-top: 5vh;
+}
+
+/* Responsive media queries */
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    /* medium screens - reduce overall fixed sizes a bit */
+    #div1{
+        width: 90%;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #div2{
+        flex: 0 0 30%;
+        max-width: 320px;
+    }
+    #div3{
+        flex: 1 1 65%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* tablet and small laptops - stack columns */
+    #div1{
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        margin-left: 2vh;
+        margin-right: 2vh;
+        margin-top: 2vh;
+        gap: 1vh;
+    }
+    #div2, #div3{
+        width: auto;
+        height: auto;
+        max-width: none;
+        flex: none;
+    }
+    /* images and floated elements: reset large offsets */
+    #img1, #img2, #img3, #img4, #img{
+        margin-left: 0;
+        margin-top: 1vh;
+    }
+    #form{ margin-left: 1vh;
+    color: #60371c; }
+    #inf{ margin-left: 1vh; 
+         color: #60371c ;
+    }
+    /* make inline groups stack vertically on narrow screens */
+    #cood, #mail, #add{
+        flex-direction: column;
+        gap: 0.5em;
+    }
+    #cood p, #mail p, #add p{ margin-top: 0.2vh; }
+}
+
+@media screen and (max-width: 480px) {
+    /* small phones - simplify layout further */
+    #div1{
+        margin-left: 1vh;
+        margin-right: 1vh;
+    }
+    /* hide the sidebar if it becomes too narrow */
+    #div2{
+        display: none;
+    }
+    #div3{
+        width: 100%;
+        max-width: none;
+    }
+    /* ensure forms and text are readable */
+    body, #div3{ font-size: 0.95rem; }
+}
+#cood{
+    display: flex;
+    gap: 1em;
+    }
+#cood p{
+    margin-top: 1vh;
+    color: #60371c;
+    }
+    
+
+#mail p{
+    margin-top: 0.5vh;
+    color: #60371c;
+    
+    
+}
+#mail{
+    display: flex;
+    gap: 1em;
+}
+
+#add{
+    display: flex;
+    gap: 1em;
+
+}
+#add p{
+    margin-top: 1vh;
+    color: #60371c;
+    
+    
+}
+#form{
+    margin-left: 8.5vh;
+}
+#form p{
+    color: #60371c;
+}
+#inf{
+    margin-left: 5vh;
+    color: #60371c;
+}
+#img{
+    margin-left: 8.5vh;
+    margin-top: 8vh;
+}
+
+
+
+
+    
+
+
+    
+    
