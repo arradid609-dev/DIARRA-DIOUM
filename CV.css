@@ -44,6 +44,8 @@
 @media screen and (min-width: 769px) and (max-width: 1200px) {
     /* medium screens - reduce overall fixed sizes a bit */
     #div1{
+        display: flex;
+       flex-direction: column;
         width: 90%;
         max-width: 1000px;
         margin-left: auto;
@@ -164,4 +166,5 @@
 
 
     
+
     
